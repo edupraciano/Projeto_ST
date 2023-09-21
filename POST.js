@@ -10,7 +10,9 @@ const usuarios = SS.getSheetByName("usuários");
 function doPost(e) {
   if (e.parameters.qual_funcao == "entrada_de_estabelecimento") {
     if (autenticacao(e)) {
-      entrada_de_estabelecimento(e);
+      return ContentService.createTextOutput(
+        JSON.stringify(entrada_de_estabelecimento(e))
+      );
     }
   } else if (e.parameters.qual_funcao == "ler_estabelecimento") {
     if (autenticacao(e)) {

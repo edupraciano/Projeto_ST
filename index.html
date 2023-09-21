@@ -31,6 +31,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     label {
@@ -39,21 +40,6 @@
       font-size: 1.2em;
       font-weight: bold;
       padding: 0 auto;
-    }
-
-    input {
-      width: 250px;
-      height: 2rem;
-      padding: 0.8rem;
-      margin: 0.3em auto;
-      font-size: 1.2em;
-      border: 1px solid rgb(184, 184, 184);
-    }
-
-    button:hover {
-      background-color: #117b96;
-      color: #ffffff;
-      transition: 300ms;
     }
 
     #div_login {
@@ -68,6 +54,25 @@
       box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
       min-width: 350px;
       min-height: auto;
+    }
+
+    #div_login>input {
+      width: 100%;
+      height: 2rem;
+      padding: 0.8rem;
+      margin: 0.3em auto;
+      font-size: 1.2em;
+      border: 1px solid rgb(184, 184, 184);
+    }
+
+    #div_login>input[type="text"]:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    #div_login>input[type="password"]:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
     }
 
     #div_login>button {
@@ -87,6 +92,12 @@
       background-color: hsl(192, 72%, 29%);
     }
 
+    #div_login>button:hover {
+      background-color: #117b96;
+      color: #ffffff;
+      transition: 300ms;
+    }
+
     #div_login>h3 {
       font-size: 1.8em;
       font-weight: 800;
@@ -99,22 +110,345 @@
       border-bottom: 1px solid rgb(184, 184, 184);
     }
 
+    #dentro_do_sistema {
+      display: none;
+      flex-direction: column;
+      width: 90%;
+      height: 90%;
+      border: solid 1px #e8e8f7;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #e6feffd0;
+      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
+      justify-content: center;
+      min-height: auto;
+    }
+
+    #header {
+      /* background-color: rgb(117, 172, 235); */
+      padding: 0.5rem;
+    }
+
+    #div_logout {
+      display: none;
+      /* margin-top: 0.5rem; */
+      align-items: end;
+      justify-content: space-between;
+      min-height: auto;
+      margin-bottom: 0.2rem;
+    }
+
+    #div_logout>button {
+      border: 1px solid #313030;
+      padding: 0 auto;
+      margin: 0 auto;
+      margin-left: 3rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100px;
+      height: 1.5rem;
+      background-color: hsl(192, 72%, 29%);
+    }
+
+    #div_logout>button:hover {
+      background-color: #117b96;
+      color: #ffffff;
+      transition: 300ms;
+    }
+
+    #menu_de_navegacao {
+      display: none;
+      text-align: center;
+      padding: 0.1rem;
+      justify-content: center;
+      min-height: auto;
+    }
+
+    #menu_de_navegacao>button {
+      border: 1px solid #313030;
+      padding: 0 2rem;
+      margin: 0 auto;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      min-width: 8rem;
+      height: 1.5rem;
+      background-color: hsl(192, 72%, 29%);
+    }
+
+    #menu_de_navegacao>button:hover {
+      background-color: #117b96;
+      color: #ffffff;
+      transition: 300ms;
+    }
+
     #formulario_de_cadastro_de_estabelecimento {
       display: none;
+      flex-direction: row;
+      margin: 0 auto;
+      justify-content: center;
+      width: 90%;
+      min-height: auto;
+      justify-content: space-around;
+    }
+
+    #box1 {
+      text-align: left;
+      justify-content: start;
+      margin: auto;
+      width: 60%;
+      min-height: auto;
+    }
+
+    #box2 {
+      text-align: left;
+      justify-content: start;
+      width: 60%;
+      min-height: auto;
+    }
+
+    #box1>label {
+      margin-left: 0.8rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+    }
+
+    #box2>label {
+      margin-left: 2.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+    }
+
+    #box1>input {
+      width: 95%;
+      height: 1.5rem;
+      padding: 0.8rem;
+      margin: 0 auto;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      border: 1px solid rgb(184, 184, 184);
+      border-radius: 5px;
+    }
+
+    #box1>input:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    #box2>input {
+      width: 95%;
+      height: 1.5rem;
+      padding: 0.8rem;
+      margin-left: 1.5rem;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      border: 1px solid rgb(184, 184, 184);
+      border-radius: 5px;
+    }
+
+    #box2>input:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    #outra_box1 {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      top: -0.2rem;
+      min-height: auto;
+      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
+      margin: 1.5rem 3rem;
+      border-radius: 10px;
+      background-color: #f6f7ff;
+    }
+
+    #outra_box2 {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      top: -0.2rem;
+      min-height: auto;
+      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
+      margin: 1.5rem 3rem;
+      border-radius: 10px;
+      background-color: #f6f7ff;
+    }
+
+    #outra_box1>h2 {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      border-bottom: 1px solid #afafaf;
+      text-align: center;
+      width: 40%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5em;
+    }
+
+    #outra_box2>h2 {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      border-bottom: 1px solid #afafaf;
+      text-align: center;
+      width: 40%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5em;
+    }
+
+    #outra_box3 {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      top: -0.2rem;
+      min-height: auto;
+      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
+      margin: 1.5rem 3rem;
+      border-radius: 10px;
+      background-color: #f6f7ff;
+    }
+
+    #outra_box3>h2 {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      border-bottom: 1px solid #afafaf;
+      text-align: center;
+      width: 40%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5em;
+    }
+
+    #box-btn>button {
+      border: 1px solid #313030;
+      padding: 0 2rem;
+      margin: 0 0.3rem;
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 0.05rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      min-width: 8rem;
+      height: 1.5rem;
+    }
+
+    .btn-blue {
+      background-color: blue;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .btn-blue:hover {
+      background-color: rgb(65, 65, 255);
+    }
+
+    .btn-orange {
+      background-color: orange;
+      color: #fff;
+    }
+
+    .btn-orange:hover {
+      background-color: rgb(230, 162, 37);
+    }
+
+    .btn-yellow {
+      background-color: rgb(255, 255, 77);
+      color: #800f14;
+    }
+
+    .btn-yellow:hover {
+      background-color: rgb(252, 252, 111);
+      color: #800f14;
+    }
+
+    .btn-red {
+      background-color: red;
+      color: #fff;
+    }
+
+    .btn-red.btn-red:hover {
+      background-color: rgb(255, 28, 28);
+      color: #fff;
     }
 
     #tabela_de_estabelecimentos {
       display: none;
     }
 
-    #div_logout {
-      display: none;
+    #example_filter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: auto;
+      text-align: center;
+      /* background-color: #bec6db; */
     }
 
-    #menu_de_navegacao {
-      display: none;
+    #example_filter>label {
+      font-size: 1rem;
+      text-align: center;
+      justify-content: center;
+      width: 90%;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
+    #example_filter>label>input[type="search"] {
+      text-align: left;
+      width: 80%;
+      margin-left: 2em;
+      border-radius: 5px;
+      height: 2em;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #example_filter>label>input[type="search"]:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    #example>tbody {
+      text-align: left;
+      font-size: 0.8rem;
+    }
+
+    thead>tr {
+      background-color: #156c81;
+      color: #fff;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    #example>tbody>tr:hover {
+      background-color: #e8ebff;
+    }
+
+    #example_info {
+      font-size: 14px;
+      color: #156c81;
+      margin-bottom: 2em;
+      /* text-align: center; */
+    }
 
     #popup {
       display: none;
@@ -173,69 +507,91 @@
     <button type="submit" onclick="btn_login()">Entrar</button>
   </div>
 
-  <div id="div_logout">
-    <h3 id="usuario_logado"></h3>
-    <button onclick="btn_logout()">Sair</button>
-  </div>
+  <div id="dentro_do_sistema">
 
-  <div id="menu_de_navegacao">
-    <button onclick="abre_cadastro_de_estabelecimento()">Formulário de Cadastro</button>
-    <button onclick="abre_tabela_de_estabelecimentos()">Tabela de Estabelecimento</button>
-    <button>Alterar Senha</button>
-  </div>
+    <div id="header">
+      <div id="div_logout">
+        <label id="usuario_logado"></label>
+        <button onclick="btn_logout()">Sair</button>
+      </div>
 
-  <div id="formulario_de_cadastro_de_estabelecimento">
+      <div id="menu_de_navegacao">
+        <button onclick="abre_cadastro_de_estabelecimento()">Formulário de Cadastro</button>
+        <button onclick="abre_tabela_de_estabelecimentos()">Tabela de Estabelecimento</button>
+        <button>Alterar Senha</button>
+      </div>
 
-    <h2>Formulário de Cadastro</h2>
+    </div>
 
-    <label for="id_do_estabelecimento"></label>ID</label> <br>
-    <input type="text" id="id_do_estabelecimento" disabled> <br> <br>
+    <div id="outra_box1">
+      <h2>Formulário de Cadastro</h2>
+      <div id="formulario_de_cadastro_de_estabelecimento">
+        <div id="box1">
 
-    <label for="nome_do_estabelecimento">Estabelecimento</label> <br>
-    <input type="text" id="nome_do_estabelecimento"> <br> <br>
+          <label for="id_do_estabelecimento"></label>ID</label> <br>
+          <input type="text" id="id_do_estabelecimento" disabled> <br> <br>
 
-    <label for="produto">Produto</label> <br>
-    <input type="text" id="produto"> <br> <br>
+          <label for="nome_do_estabelecimento">Estabelecimento</label> <br>
+          <input type="text" id="nome_do_estabelecimento"> <br> <br>
 
-    <label for="chave">Chave</label> <br>
-    <input type="text" id="chave"> <br> <br>
+          <label for="produto">Produto</label> <br>
+          <input type="text" id="produto"> <br> <br>
 
-    <label for="maquina">Máquina</label> <br>
-    <input type="text" id="maquina"> <br> <br>
+          <label for="chave">Chave</label> <br>
+          <input type="text" id="chave"> <br> <br>
 
-    <label for="endereco">Endereço</label> <br>
-    <input type="text" id="endereco"> <br> <br>
+        </div>
 
-    <label for="responsavel">Responsável</label> <br>
-    <input type="text" id="responsavel"> <br> <br>
+        <div id="box2">
 
-    <label for="contato">Contato</label> <br>
-    <input type="text" id="contato"> <br> <br>
+          <label for="maquina">Máquina</label> <br>
+          <input type="text" id="maquina"> <br> <br>
 
-    <button onclick="disparaAoClicar()">Enviar</button>
-    <button onclick="alterar()">Alterar</button>
-    <button onclick="limpar()">Limpar</button>
-    <button onclick="excluir_este_id()">Excluir</button>
-  </div>
+          <label for="endereco">Endereço</label> <br>
+          <input type="text" id="endereco"> <br> <br>
 
-  <div id="tabela_de_estabelecimentos">
+          <label for="responsavel">Responsável</label> <br>
+          <input type="text" id="responsavel"> <br> <br>
 
-    <h2>Tabela de Estabelecimentoss</h2>
+          <label for="contato">Contato</label> <br>
+          <input type="text" id="contato"> <br> <br>
 
-    <table id="example" class="display nowrap" style="width:100%">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Estabelecimento</th>
-          <th>Produto</th>
-          <th>Chave</th>
-          <th>Máquina</th>
-          <th>Endereço</th>
-          <th>Responsável</th>
-          <th>Contato</th>
-        </tr>
-      </thead>
-    </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="box-btn">
+
+      <button class="btn-blue" onclick="disparaAoClicar()">Enviar</button>
+      <button class="btn-orange" onclick="alterar()">Alterar</button>
+      <button class="btn-yellow" onclick="limpar()">Limpar</button>
+      <button class="btn-red" onclick="excluir_este_id()">Excluir</button>
+
+    </div>
+
+    <div id="outra_box2">
+      <h2>Tabela de Estabelecimentos</h2>
+      <div id="tabela_de_estabelecimentos">
+
+        <table id="example" class="display nowrap" style="width:100%">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Estabelecimento</th>
+              <th>Produto</th>
+              <th>Chave</th>
+              <th>Máquina</th>
+              <th>Endereço</th>
+              <th>Responsável</th>
+              <th>Contato</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+    </div>
+
   </div>
 
   <div id="popup">
@@ -261,9 +617,9 @@
     if (user_name == "") {
 
       $('#div_login').fadeOut(0, function () {
-        $('#div_login').fadeIn(550);
+        $('#div_login').fadeIn(450);
       });
-
+      document.getElementById('dentro_do_sistema').style.display = "none";
       document.getElementById('div_login').style.display = "flex";
 
     } else {
@@ -278,8 +634,21 @@
       }).done(function (data) {
         //console.log(data);
         if (data == "true") {
-          // USUÁRIO LOGADO
+          // USUÁRIO LOGADO          
+
+          $('#dentro_do_sistema').fadeOut(0, function () {
+            $('#dentro_do_sistema').fadeIn(450);
+          });
+
+          $('#header').fadeOut(0, function () {
+            $('#header').fadeIn(450);
+          });
+
+          document.getElementById('dentro_do_sistema').style.display = 'flex';
           document.getElementById('div_login').style.display = 'none';
+          document.getElementById('outra_box1').style.display = 'none';
+          document.getElementById('outra_box2').style.display = 'none';
+          document.getElementById('box-btn').style.display = 'none';
           document.getElementById('div_logout').style.display = "block";
           document.getElementById('menu_de_navegacao').style.display = 'block';
           document.getElementById('usuario_logado').innerHTML = 'Bem vindo(a), ' + user_name;
@@ -313,9 +682,22 @@
     }).done(function (data) {
 
       if (data == "true") {
-        // USUÁRIO LOGADO
-        console.log("Usuário Logado.");
+        // USUÁRIO LOGADO       
 
+        console.log("Usuário Logado.");
+        $('#div_login').fadeOut(0, function () {
+          $('#div_login').fadeIn(450);
+        });
+        $('#header').fadeOut(0, function () {
+          $('#header').fadeIn(450);
+        });
+
+        document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "flex";
+        // document.getElementById("tabela_de_estabelecimentos").style.display = "none";
+        // document.getElementById('outra_box1').style.display = 'block';
+        // document.getElementById('outra_box2').style.display = 'none';
+        // document.getElementById('box-btn').style.display = 'block';
+        document.getElementById('dentro_do_sistema').style.display = "flex";
         document.getElementById('div_logout').style.display = "block";
         document.getElementById('menu_de_navegacao').style.display = 'block';
         document.getElementById('div_login').style.display = "none";
@@ -348,10 +730,11 @@
     localStorage.setItem('password', '');
 
     $('#div_login').fadeOut(0, function () {
-      $('#div_login').fadeIn(550);
+      $('#div_login').fadeIn(450);
     })
 
     document.getElementById('div_login').style.display = "flex";
+    document.getElementById('dentro_do_sistema').style.display = "none";
     document.getElementById('div_logout').style.display = "none";
     document.getElementById('menu_de_navegacao').style.display = 'none';
     document.getElementById('tabela_de_estabelecimentos').style.display = 'none';
@@ -395,14 +778,36 @@
   }
 
   function abre_cadastro_de_estabelecimento() {
-    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "block";
+
+    $('#dentro_do_sistema').fadeOut(0, function () {
+      $('#dentro_do_sistema').fadeIn(450);
+    });
+
+    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "flex";
     document.getElementById("tabela_de_estabelecimentos").style.display = "none";
+    document.getElementById('outra_box1').style.display = 'block';
+    document.getElementById('outra_box2').style.display = 'none';
+    document.getElementById('box-btn').style.display = 'block';
   }
 
   function abre_tabela_de_estabelecimentos() {
+
+    $('#dentro_do_sistema').fadeOut(0, function () {
+      $('#dentro_do_sistema').fadeIn(450);
+    });
     document.getElementById("tabela_de_estabelecimentos").style.display = "block";
-    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "none";
+    document.getElementById('box-btn').style.display = "none";
+    document.getElementById('outra_box1').style.display = "none";
+    document.getElementById('outra_box2').style.display = 'block';
+    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "block";
     lerDadosDaTabela();
+  }
+
+  function alterar_senha() {
+    $('#dentro_do_sistema').fadeOut(0, function () {
+      $('#dentro_do_sistema').fadeIn(450);
+    });
+
   }
 
   function disparaAoClicar() {
