@@ -1,8 +1,6 @@
 // Constantes Globais
 
-const SS = SpreadsheetApp.openById(
-  "1XT34dl9qhguB8dRjlm3JhmpmqiLs_UpRXjrDgEmmcV0"
-);
+const SS = SpreadsheetApp.openById("1XT34dl9qhguB8dRjlm3JhmpmqiLs_UpRXjrDgEmmcV0");
 const main = SS.getSheetByName("main");
 const usuarios = SS.getSheetByName("usuários");
 /////////////////////////////////////////////////////////////////////////////////
@@ -14,9 +12,7 @@ function doPost(e) {
     }
   } else if (e.parameters.qual_funcao == "ler_estabelecimento") {
     if (autenticacao(e)) {
-      return ContentService.createTextOutput(
-        JSON.stringify(ler_estabelecimento(e))
-      );
+      return ContentService.createTextOutput(JSON.stringify(ler_estabelecimento(e)));
     }
   } else if (e.parameters.qual_funcao == "remover_estabelecimento") {
     if (autenticacao(e)) {
@@ -50,15 +46,9 @@ function autenticacao(e) {
 
 function entrada_de_estabelecimento(e) {
   try {
-    var SS = SpreadsheetApp.openById(
-      "1XT34dl9qhguB8dRjlm3JhmpmqiLs_UpRXjrDgEmmcV0"
-    );
-    var main = SS.getSheetByName("main");
-    var data_do_cadastro = Utilities.formatDate(
-      new Date(),
-      "GMT-3",
-      "dd/MM/yyyy"
-    );
+    var SS = SpreadsheetApp.openById("1XT34dl9qhguB8dRjlm3JhmpmqiLs_UpRXjrDgEmmcV0");
+    var main = SS.getSheetByName('main');
+    var data_do_cadastro = Utilities.formatDate(new Date(), "GMT-3", "dd/MM/yyyy");
 
     var colunaId = main.getRange("A2:A").getValues();
     var id = "";
@@ -69,55 +59,53 @@ function entrada_de_estabelecimento(e) {
 
     if (e.parameters.id_do_estabelecimento == "") {
       // ADICIONAR ESTABELECIMENTO
-      var ultimaLinha = main.getLastRow() + 1;
+      var ultimaLinha = main.getLastRow() + 1
 
-      main.getRange(ultimaLinha, 1).setValue(id);
-      main
-        .getRange(ultimaLinha, 2)
-        .setValue(e.parameters.nome_do_estabelecimento);
-      main.getRange(ultimaLinha, 3).setValue(e.parameters.produto);
-      main.getRange(ultimaLinha, 4).setValue(e.parameters.chave);
+      main.getRange(ultimaLinha, 1).setValue(id)
+      main.getRange(ultimaLinha, 2).setValue(e.parameters.nome_do_estabelecimento)
+      main.getRange(ultimaLinha, 3).setValue(e.parameters.produto)
+      main.getRange(ultimaLinha, 4).setValue(e.parameters.chave)
       main.getRange(ultimaLinha, 5).setValue(e.parameters.maquina);
       main.getRange(ultimaLinha, 6).setValue(e.parameters.endereco);
       main.getRange(ultimaLinha, 7).setValue(e.parameters.responsavel);
       main.getRange(ultimaLinha, 8).setValue(e.parameters.contato);
       main.getRange(ultimaLinha, 9).setValue(data_do_cadastro);
-      return "Estabelecimento Adicionado com Sucesso!";
+      return "Estabelecimento Adicionado com Sucesso!"
     } else {
-      // ALTERAR ESTABELECIMENTO
-      var ultimaLinha = main.getLastRow() + 1;
+      // ALTERAR ESTABELECIMENTO    
+      var ultimaLinha = main.getLastRow() + 1
 
       for (var i = 1; i < ultimaLinha; i++) {
-        if (
-          main.getRange(i, 1).getValue() == e.parameters.id_do_estabelecimento
-        ) {
-          main.getRange(i, 1).setValue(e.parameters.id_do_estabelecimento);
-          main.getRange(i, 2).setValue(e.parameters.nome_do_estabelecimento);
-          main.getRange(i, 3).setValue(e.parameters.produto);
-          main.getRange(i, 4).setValue(e.parameters.chave);
+
+        if (main.getRange(i, 1).getValue() == e.parameters.id_do_estabelecimento) {
+
+          main.getRange(i, 1).setValue(e.parameters.id_do_estabelecimento)
+          main.getRange(i, 2).setValue(e.parameters.nome_do_estabelecimento)
+          main.getRange(i, 3).setValue(e.parameters.produto)
+          main.getRange(i, 4).setValue(e.parameters.chave)
           main.getRange(i, 5).setValue(e.parameters.maquina);
           main.getRange(i, 6).setValue(e.parameters.endereco);
           main.getRange(i, 7).setValue(e.parameters.responsavel);
           main.getRange(i, 8).setValue(e.parameters.contato);
           main.getRange(i, 9).setValue(data_do_cadastro);
-          return "Estabelecimento Aletrado com Sucesso!";
+          return "Estabelecimento Aletrado com Sucesso!"          
         }
       }
     }
   } catch (e) {
-    return "Houve algum problema!";
+    return "Houve algum problema!"
   }
 }
+
 
 function ler_estabelecimento(e) {
   var ultimaLinha = main.getLastRow();
   var ultimaColuna = main.getLastColumn();
-  var todaATabela = main
-    .getRange(2, 1, ultimaLinha - 1, ultimaColuna)
-    .getValues();
+  var todaATabela = main.getRange(2, 1, ultimaLinha - 1, ultimaColuna).getValues();
 
   return todaATabela;
 }
+
 
 function remover_estabelecimento(e) {
   let ultima_linha_main = main.getLastRow();
@@ -128,3 +116,6 @@ function remover_estabelecimento(e) {
     }
   }
 }
+
+
+

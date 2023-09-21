@@ -1,0 +1,5 @@
+// GET.gs
+
+function doGet(e) {
+  return HtmlService.createHtmlOutputFromFile('index');  
+}
