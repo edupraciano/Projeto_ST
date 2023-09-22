@@ -18,7 +18,7 @@
   <style>
     * {
       box-sizing: border-box;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
       margin: 0;
       padding: 0;
       outline: 0;
@@ -131,11 +131,11 @@
 
     #div_logout {
       display: none;
-      /* margin-top: 0.5rem; */
       align-items: end;
       justify-content: space-between;
       min-height: auto;
-      margin-bottom: 0.2rem;
+      margin: 0.3rem auto;
+      margin-top: 1rem;
     }
 
     #div_logout>button {
@@ -165,7 +165,7 @@
     #menu_de_navegacao {
       display: none;
       text-align: center;
-      padding: 0.1rem;
+      /* padding: 0.1rem; */
       justify-content: center;
       min-height: auto;
     }
@@ -184,7 +184,7 @@
       border-radius: 5px;
       min-width: 8rem;
       height: 1.5rem;
-      background-color: hsl(192, 72%, 29%);
+      background-color: #156a7f;
     }
 
     #menu_de_navegacao>button:hover {
@@ -291,7 +291,8 @@
     #outra_box1>h2 {
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
-      border-bottom: 1px solid #afafaf;
+      border-bottom: 1px solid #bcc1c2;
+      color: #0f5364;
       text-align: center;
       width: 40%;
       margin: 0 auto;
@@ -302,31 +303,8 @@
     #outra_box2>h2 {
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
-      border-bottom: 1px solid #afafaf;
-      text-align: center;
-      width: 40%;
-      margin: 0 auto;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5em;
-    }
-
-    #outra_box3 {
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-      position: relative;
-      top: -0.2rem;
-      min-height: auto;
-      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
-      margin: 1.5rem 3rem;
-      border-radius: 10px;
-      background-color: #f6f7ff;
-    }
-
-    #outra_box3>h2 {
-      font-size: 1.2rem;
-      letter-spacing: 0.05rem;
-      border-bottom: 1px solid #afafaf;
+      border-bottom: 1px solid #bcc1c2;
+      color: #0f5364;
       text-align: center;
       width: 40%;
       margin: 0 auto;
@@ -400,7 +378,6 @@
       width: 100%;
       min-height: auto;
       text-align: center;
-      /* background-color: #bec6db; */
     }
 
     #example_filter>label {
@@ -447,7 +424,97 @@
       font-size: 14px;
       color: #156c81;
       margin-bottom: 2em;
-      /* text-align: center; */
+    }
+
+    #formulario_de_alteracao_de_senha {
+      flex-direction: flex;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      top: -0.2rem;
+      min-width: 50%;
+      min-height: 60%;
+      box-shadow: 0px 0px 10px rgba(11, 2, 43, 0.5);
+      margin: 1.5rem 3rem;
+      border-radius: 10px;
+      background-color: #f6f7ff;
+      justify-content: start;
+    }
+
+    #formulario_de_alteracao_de_senha>label {
+      position: relative;
+      left: -6rem;
+      margin-left: 0.8rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+    }
+
+    #formulario_de_alteracao_de_senha>input[type="text"] {
+      width: 30%;
+      height: 1.5rem;
+      padding: 0.8rem;
+      margin: 0.6rem auto;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      border: 1px solid rgb(184, 184, 184);
+      border-radius: 5px;
+      align-items: center;
+    }
+
+    #formulario_de_alteracao_de_senha>input[type="password"] {
+      width: 30%;
+      height: 1.5rem;
+      padding: 0.8rem;
+      margin: 0.6rem auto;
+      font-size: 0.9rem;
+      border: 1px solid rgb(184, 184, 184);
+      border-radius: 5px;
+    }
+
+    input#id_da_senha_antiga:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    input#id_da_senha_nova:hover {
+      background-color: #e8ebff;
+      transition: 300ms;
+    }
+
+    #formulario_de_alteracao_de_senha>h2 {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      border-bottom: 1px solid #bcc1c2;
+      text-align: center;
+      width: 40%;
+      color: #0f5364;
+      margin: 1rem auto;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5em;
+    }
+
+    #formulario_de_alteracao_de_senha>button {
+      border: 1px solid #313030;
+      padding: 0 2rem;
+      margin: 0 auto;
+      margin-top: 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      min-width: 8rem;
+      height: 1.5rem;
+      background-color: hsl(192, 72%, 29%);
+    }
+
+    #formulario_de_alteracao_de_senha>button:hover {
+      background-color: #117b96;
+      color: #ffffff;
+      transition: 300ms;
     }
 
     #popup {
@@ -508,7 +575,6 @@
   </div>
 
   <div id="dentro_do_sistema">
-
     <div id="header">
       <div id="div_logout">
         <label id="usuario_logado"></label>
@@ -518,16 +584,14 @@
       <div id="menu_de_navegacao">
         <button onclick="abre_cadastro_de_estabelecimento()">Formulário de Cadastro</button>
         <button onclick="abre_tabela_de_estabelecimentos()">Tabela de Estabelecimento</button>
-        <button>Alterar Senha</button>
+        <button onclick="abreAlteracaoDeSenha()">Alterar Senha</button>
       </div>
-
     </div>
 
     <div id="outra_box1">
       <h2>Formulário de Cadastro</h2>
       <div id="formulario_de_cadastro_de_estabelecimento">
         <div id="box1">
-
           <label for="id_do_estabelecimento"></label>ID</label> <br>
           <input type="text" id="id_do_estabelecimento" disabled> <br> <br>
 
@@ -539,11 +603,9 @@
 
           <label for="chave">Chave</label> <br>
           <input type="text" id="chave"> <br> <br>
-
         </div>
 
         <div id="box2">
-
           <label for="maquina">Máquina</label> <br>
           <input type="text" id="maquina"> <br> <br>
 
@@ -555,25 +617,20 @@
 
           <label for="contato">Contato</label> <br>
           <input type="text" id="contato"> <br> <br>
-
         </div>
-
       </div>
     </div>
 
     <div id="box-btn">
-
       <button class="btn-blue" onclick="disparaAoClicar()">Enviar</button>
       <button class="btn-orange" onclick="alterar()">Alterar</button>
       <button class="btn-yellow" onclick="limpar()">Limpar</button>
       <button class="btn-red" onclick="excluir_este_id()">Excluir</button>
-
     </div>
 
     <div id="outra_box2">
       <h2>Tabela de Estabelecimentos</h2>
       <div id="tabela_de_estabelecimentos">
-
         <table id="example" class="display nowrap" style="width:100%">
           <thead>
             <tr>
@@ -589,9 +646,20 @@
           </thead>
         </table>
       </div>
-
     </div>
 
+    <div id="formulario_de_alteracao_de_senha">
+      <h2>Alteração de Senha</h2>
+      <label for="id_da_senha_antiga">Senha Atual</label>
+      <br>
+      <input type="password" id="id_da_senha_antiga" />
+      <br>
+      <label for="id_da_senha_nova">Nova Senha</label>
+      <br>
+      <input type="password" id="id_da_senha_nova" />
+      <br>
+      <button class="btn" onclick="alterar_a_senha()"> ALTERAR </button>
+    </div>
   </div>
 
   <div id="popup">
@@ -600,11 +668,13 @@
       <button id="close-btn">Fechar</button>
     </div>
   </div>
+
+  </div>
 </body>
 
 <script>
   var minhaUrl =
-    "https://script.google.com/macros/s/AKfycbwxROeUFlV33V70esDgjRvHuxHzWP4lrBQyacP94AnJ3rFokHPHYXS3JmbH3XMPY5cYqA/exec";
+    "https://script.google.com/macros/s/AKfycbyOPTa9wYniOjqYI7jJd2E-JxO-HMpKkU0Cxa6YeMH_tLFuaLQB3gueSNNgRtXMESrp8Q/exec";
 
   $(document).ready(function () {
     var user_name = localStorage.getItem('user_name');
@@ -619,6 +689,7 @@
       $('#div_login').fadeOut(0, function () {
         $('#div_login').fadeIn(450);
       });
+
       document.getElementById('dentro_do_sistema').style.display = "none";
       document.getElementById('div_login').style.display = "flex";
 
@@ -651,6 +722,7 @@
           document.getElementById('box-btn').style.display = 'none';
           document.getElementById('div_logout').style.display = "block";
           document.getElementById('menu_de_navegacao').style.display = 'block';
+
           document.getElementById('usuario_logado').innerHTML = 'Bem vindo(a), ' + user_name;
         } else {
           // USUÁRIO NÃO-LOGADO
@@ -685,6 +757,9 @@
         // USUÁRIO LOGADO       
 
         console.log("Usuário Logado.");
+        console.log("Usuário: " + user_name);
+        console.log("Senha: " + password);
+
         $('#div_login').fadeOut(0, function () {
           $('#div_login').fadeIn(450);
         });
@@ -692,19 +767,13 @@
           $('#header').fadeIn(450);
         });
 
-        document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "flex";
-        // document.getElementById("tabela_de_estabelecimentos").style.display = "none";
-        // document.getElementById('outra_box1').style.display = 'block';
-        // document.getElementById('outra_box2').style.display = 'none';
-        // document.getElementById('box-btn').style.display = 'block';
+        //document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "flex";       
         document.getElementById('dentro_do_sistema').style.display = "flex";
         document.getElementById('div_logout').style.display = "block";
         document.getElementById('menu_de_navegacao').style.display = 'block';
         document.getElementById('div_login').style.display = "none";
-        document.getElementById('usuario_logado').innerHTML = 'Bem vindo(a), ' + user_name;
 
-        console.log("Usuário: " + user_name);
-        console.log("Senha: " + password);
+        document.getElementById('usuario_logado').innerHTML = 'Bem vindo(a), ' + user_name;
 
       } else {
         // USUÁRIO NÃO-LOGADO
@@ -739,6 +808,7 @@
     document.getElementById('menu_de_navegacao').style.display = 'none';
     document.getElementById('tabela_de_estabelecimentos').style.display = 'none';
     document.getElementById('formulario_de_cadastro_de_estabelecimento').style.display = 'none';
+    document.getElementById('formulario_de_alteracao_de_senha').style.display = 'none';
 
     try {
       $("#example").DataTable().clear();
@@ -785,6 +855,7 @@
 
     document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "flex";
     document.getElementById("tabela_de_estabelecimentos").style.display = "none";
+    document.getElementById("formulario_de_alteracao_de_senha").style.display = "none";
     document.getElementById('outra_box1').style.display = 'block';
     document.getElementById('outra_box2').style.display = 'none';
     document.getElementById('box-btn').style.display = 'block';
@@ -799,15 +870,58 @@
     document.getElementById('box-btn').style.display = "none";
     document.getElementById('outra_box1').style.display = "none";
     document.getElementById('outra_box2').style.display = 'block';
-    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "block";
+    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "none";
+    document.getElementById("formulario_de_alteracao_de_senha").style.display = "none";
     lerDadosDaTabela();
   }
 
-  function alterar_senha() {
-    $('#dentro_do_sistema').fadeOut(0, function () {
-      $('#dentro_do_sistema').fadeIn(450);
+  function abreAlteracaoDeSenha() {
+    $('#formulario_de_alteracao_de_senha').fadeOut(0, function () {
+      $('#formulario_de_alteracao_de_senha').fadeIn(250);
     });
+    document.getElementById("formulario_de_alteracao_de_senha").style.display = "block";
+    document.getElementById("tabela_de_estabelecimentos").style.display = "none";
+    document.getElementById("formulario_de_cadastro_de_estabelecimento").style.display = "none";
+    document.getElementById("box-btn").style.display = "none";
+    document.getElementById('outra_box1').style.display = "none";
+    document.getElementById('outra_box2').style.display = 'none';
+  }
 
+  function alterar_a_senha() {
+    var user_name = localStorage.getItem('user_name');
+    var password = localStorage.getItem('password');
+
+    var senha_antiga = document.getElementById('id_da_senha_antiga').value;
+    var senha_nova = document.getElementById('id_da_senha_nova').value;
+
+    $.ajax({
+      type: 'POST',
+      data: {
+        qual_funcao: 'alterarSenha',
+        user_name: user_name,
+        password: password,
+        senha_antiga: senha_antiga,
+        senha_nova: senha_nova,
+      },
+      url: minhaUrl,
+    }).done(function (data) {
+      console.log(data);
+
+      if (data == '"Senha Alterada!"') {
+        alert(data);
+        document.getElementById('formulario_de_alteracao_de_senha').style.display = 'none';
+        document.getElementById('id_da_senha_antiga').value = '';
+        document.getElementById('id_da_senha_nova').value = '';
+
+        localStorage.setItem('user_name', '');
+        localStorage.setItem('password', '');
+
+        localStorage.setItem('user_name', user_name);
+        localStorage.setItem('password', senha_nova);
+      } else {
+        alert(data);
+      }
+    });
   }
 
   function disparaAoClicar() {
@@ -851,8 +965,7 @@
       document.getElementById('responsavel').value = '';
       document.getElementById('contato').value = '';
 
-      alert('Estabelecimento Cadastrado com Sucesso!');
-      //alert(data);
+      alert(data);
       abre_tabela_de_estabelecimentos();
     });
   }

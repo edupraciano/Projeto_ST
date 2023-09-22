@@ -26,7 +26,29 @@ function doPost(e) {
     remover_estabelecimento(e);
   } else if (e.parameters.qual_funcao == "autenticacao") {
     return ContentService.createTextOutput(JSON.stringify(autenticacao(e)));
+  } else if (e.parameters.qual_funcao == "alterarSenha") {
+    if (autenticacao(e)) {
+      return ContentService.createTextOutput(JSON.stringify(alterarSenha(e)));
+    }
   }
+}
+
+function alterarSenha(e) {
+  var qtdeFuncionario = usuarios.getLastRow() + 1;
+
+  var usuario = e.parameters.user_name;
+  var senha_antiga = e.parameters.senha_antiga;
+  var senha_nova = e.parameters.senha_nova;
+
+  for (var i = 1; i < qtdeFuncionario; i++) {
+    if (usuarios.getRange(i, 1).getValue() == usuario) {
+      if (usuarios.getRange(i, 2).getValue() == senha_antiga) {
+        usuarios.getRange(i, 2).setValue(senha_nova);
+        return "Senha Alterada!";
+      }
+    }
+  }
+  return "Nada Foi Alterado!";
 }
 
 function autenticacao(e) {
